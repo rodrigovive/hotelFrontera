@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Room;
+use Illuminate\Support\Facades\Log;
+
 use Illuminate\Http\Request;
 
 class RoomController extends Controller
@@ -15,6 +17,8 @@ class RoomController extends Controller
     public function index()
     {
         //
+        
+        return view('backend.room.index');
     }
 
     /**
@@ -36,6 +40,24 @@ class RoomController extends Controller
     public function store(Request $request)
     {
         //
+        // Log::info("News para borrar  2sdasdzcxzxczxcczx = " . print_r($request->description, true));
+        // Log::info("News para borrar  2sdasdzcxzxczxcczx = " . print_r($request->num_room, true));
+
+        // $data = $request->all();
+        $file = $request->file('image');
+
+        if($file!=null){
+            $file->move(public_path()."/uploads", $file->getClientOriginalName());
+            $data["photo"] = $file->getClientOriginalName();
+        }
+        // $data["photo"] = 'aqui esta la foto';
+        $data["description"] = $request->description;
+        // $data["photo"] = $request->photo;
+        $data["num_room"] = $request->num_room;
+        $data["state"] = $request->state;
+        $rooms = Room::create($data);
+        return redirect('/admin/habitacion');
+        
     }
 
     /**

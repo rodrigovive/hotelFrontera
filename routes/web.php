@@ -18,11 +18,27 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'], function () {
         'store' => 'room.store',
         'destroy/{id}' => 'room.destroy',
     ]]);
-
+    
+    Route::resource('/habitaciones-alquiladas','RoomGuestController');
+    
     Route::resource('/huesped','GuestController', ['names' => [
         'index' => 'guest.index',
         'store' => 'guest.store',
         'destroy/{id}' => 'guest.destroy',
+        ]]);
+
+    Route::get('/huesped-registrados','GuestController@getAll');
+
+    Route::resource('/habitacion','RoomController', ['names' => [
+        'index' => 'room.index',
+        'store' => 'room.store',
+        'destroy/{id}' => 'room.destroy',
+        ]]);
+
+    Route::resource('/alquiler','RentController', ['names' => [
+        'index' => 'rent.index',
+        'store' => 'rent.store',
+        'destroy/{id}' => 'rent.destroy',
         ]]);
     
 });

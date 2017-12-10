@@ -16,8 +16,9 @@
     <link href="{{ asset('css/bootstrap-grid.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/colors/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/colors/main.css') }}" rel="stylesheet">
 
-     <link href="{{ asset('css/toastr.min.css') }}" rel="stylesheet"/>
+     <link href="{{ asset('css/datatables.min.css') }}" rel="stylesheet"/>
 
 </head>
 <body>

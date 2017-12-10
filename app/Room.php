@@ -8,7 +8,7 @@ class Room extends Model
 {
     //
     protected $table = 'rooms';
-    protected $fillable = ["state","num_room","type_id"];
+    protected $fillable = ["state","num_room","type_id","description","photo"];
 
     public function type(){
         return $this->belongsTo(Type::class);

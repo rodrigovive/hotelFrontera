@@ -15,6 +15,7 @@ class GuestController extends Controller
     public function index()
     {
         //
+        return view('backend.guest.index');
     }
 
     /**
@@ -36,6 +37,18 @@ class GuestController extends Controller
     public function store(Request $request)
     {
         //
+        $data["dni"] = $request->dni;
+        $data["name"] = $request->name;
+        $data["lastname"] = $request->lastname;
+        $data["occupation"] = $request->occupation;
+        $data["direction"] = $request->direction;
+        $data["city"] = $request->city;
+        $data["country"] = $request->country;
+        $guests = Guest::create($data);
+        if($request->alquiler){
+            return redirect('/admin/alquiler');
+        }
+        return redirect('/admin/huesped');
     }
 
     /**
@@ -47,6 +60,12 @@ class GuestController extends Controller
     public function show(Guest $guest)
     {
         //
+    }
+    public function getAll(Guest $guest)
+    {
+        //
+        $guests = Guest::all();
+        return view('backend.guest.show')->with('guests',$guests);
     }
 
     /**

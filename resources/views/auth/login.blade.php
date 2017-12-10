@@ -1,69 +1,97 @@
-@extends('layouts.app')
+<!DOCTYPE html>
 
-@section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
+<!-- Mirrored from gam.cool/admin/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Oct 2017 14:16:37 GMT -->
 
-                <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('login') }}">
-                        {{ csrf_field() }}
+<head>
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+	<!-- Basic Page Needs
+================================================== -->
+	<title>Hotel Admin </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+	<!-- CSS
+================================================== -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/colors/grey.html" id="colors">
 
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+</head>
 
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
+<body>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
+	<!-- Wrapper -->
+	<div id="wrapper">
 
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
 
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
+		<!-- Content
+================================================== -->
 
-                        <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Login
-                                </button>
+		<!-- Coming Soon Page -->
+		<div class="coming-soon-page" style="background-image: url(images/main-search-background-01.jpg)">
+			<div class="container">
+				<!-- Search -->
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2">
+						<h1 class="white"><strong>Login</strong></h1>
+						<form class="form-horizontal" method="POST" action="{{ route('login') }}">
+							{{ csrf_field() }}
+							<div class="main-search-input gray-style margin-top-30 margin-bottom-10">
 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Forgot Your Password?
-                                </a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection
+								<div class="main-search-input-item">
+									<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+										<input id="email" type="email" name="email" placeholder="GAM-USER" required /> 
+										@if ($errors->has('email'))
+										<span class="help-block">
+                                        	<strong>Error en el correos</strong>
+                                    	</span> 
+										@endif
+									</div>
+								</div>
+
+
+								<div class="main-search-input-item">
+									<div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+										<input id="password" class="form-control" name="password" required type="password" placeholder="GAM-PIN" /> 
+										@if ($errors->has('password'))
+										<span class="help-block">
+                                        	<strong>{{ $errors->first('password') }}</strong>
+                                    	</span> 
+										@endif
+									</div>
+								</div>
+								<a href="dashboard.html"><button type="submit" class="button">Entrar</button></a>
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- Search Section / End -->
+			</div>
+		</div>
+		<!-- Coming Soon Page / End -->
+
+	</div>
+	<!-- Wrapper / End -->
+
+
+
+	<!-- Scripts
+================================================== -->
+	<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
+	<script type="text/javascript" src="scripts/mmenu.min.js"></script>
+	<script type="text/javascript" src="scripts/chosen.min.js"></script>
+	<script type="text/javascript" src="scripts/slick.min.js"></script>
+	<script type="text/javascript" src="scripts/rangeslider.min.js"></script>
+	<script type="text/javascript" src="scripts/magnific-popup.min.js"></script>
+	<script type="text/javascript" src="scripts/waypoints.min.js"></script>
+	<script type="text/javascript" src="scripts/counterup.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="scripts/tooltips.min.js"></script>
+	<script type="text/javascript" src="scripts/custom.js"></script>
+
+
+
+</body>
+
+<!-- Mirrored from gam.cool/admin/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Oct 2017 14:16:37 GMT -->
+
+</html>

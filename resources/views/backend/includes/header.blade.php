@@ -9,7 +9,7 @@
 				
 				<!-- Logo -->
 				<div id="logo">
-					<h1 class="white text-center"><strong>GAM</strong></h1>
+					<h1 class="white text-center"><strong>Hotel</strong></h1>
 				</div>
 
 				<!-- Mobile Navigation -->
@@ -35,14 +35,14 @@
 					
 					<!-- User Menu -->
 					<div class="user-menu">
-						<div class="user-name"><span><img src="images/dashboard-avatar.jpg" alt=""></span><strong>GAM</strong></div>
+						<div class="user-name"><span><img src="images/dashboard-avatar.jpg" alt=""></span><strong>HOTEL</strong></div>
 						<ul>
 							
 							<li><a href="index.html"><i class="sl sl-icon-power"></i> Logout</a></li>
 						</ul>
 					</div>
 
-					<a href="{{ route('news.index') }}" class="button border with-icon">New News <i class="sl sl-icon-plus"></i></a>
+					<a href="" class="button border with-icon">Nuevo Alquiler <i class="sl sl-icon-plus"></i></a>
 				</div>
 				<!-- Header Widget / End -->
 			</div>

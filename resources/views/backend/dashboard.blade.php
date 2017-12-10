@@ -11,12 +11,12 @@
 		<div id="titlebar">
 			<div class="row">
 				<div class="col-md-12">
-					<h2>Panel de Administracion</h2>
+					<h2>Administracion</h2>
 					<!-- Breadcrumbs -->
 					<nav id="breadcrumbs">
 						<ul>
 							<li><a href="/">Home</a></li>
-							<li>Noticias Creadas</li>
+							<li>Alquileres Actuales</li>
 						</ul>
 					</nav>
 				</div>

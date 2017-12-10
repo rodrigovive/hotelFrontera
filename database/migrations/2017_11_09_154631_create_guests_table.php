@@ -22,7 +22,6 @@ class CreateGuestsTable extends Migration
             $table->string('city');
             $table->string('direction');
             $table->string('dni');
-            $table->date('birth');
             $table->string('occupation');
         });
     }

@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Rent;
+use App\Room;
+use App\Guest;
+
 use Illuminate\Http\Request;
 
 class RentController extends Controller
@@ -15,6 +18,12 @@ class RentController extends Controller
     public function index()
     {
         //
+
+        $guests = Guest::all();
+        $rooms = Room::all();
+        return view('backend.rent.index')
+        ->with('guests',$guests)
+        ->with('rooms',$rooms);
     }
 
     /**
